@@ -4,7 +4,7 @@
 -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">  
   <metadata>
-    <id>Deerso</id>
+    <id>Deerso.Logging</id>
     <version>0.0.0</version>
     <authors>Kyle Gobel</authors>
     <description>Custom logger assembly for Deerso, based on servicestack</description>
