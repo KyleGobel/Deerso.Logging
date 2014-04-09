@@ -10,6 +10,8 @@
 bin/
 test/
 # Build results
+.nupkg
+
 
 [Dd]ebug/
 [Rr]elease/
