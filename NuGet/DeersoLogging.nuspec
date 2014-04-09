@@ -15,6 +15,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\bin\Deerso.Logging.dll" target="lib">
+    <file src="..\..\bin\Deerso.Logging.dll" target="lib"/>
   </files>
 </package>
