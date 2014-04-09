@@ -1,1 +1,1 @@
-..\src\.nuget\nuget pack DeersoLogging.nuspec -symbols
+src\.nuget\nuget pack NuGet\DeersoLogging.nuspec -symbols
