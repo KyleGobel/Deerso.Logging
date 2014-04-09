@@ -47,7 +47,8 @@ namespace Logging
             {
                 _logName += "_" + DateTime.Now.ToString("yy-MM-dd");
             }
-
+            if (!Directory.Exists(FileLogConfig.LogDirectory))
+                Directory.CreateDirectory(FileLogConfig.LogDirectory);
             File.AppendAllText(Path.Combine(FileLogConfig.LogDirectory, _logName + FileLogConfig.LogExtension), sb.ToString());
         }
         public void Debug(object message)
