@@ -1,0 +1,1 @@
+..\src\.nuget\nuget pack DeersoLogging.nuspec -symbols
