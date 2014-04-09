@@ -15,5 +15,5 @@ if not "%errorlevel%"=="0" goto failure
 
 REM Package
 mkdir Build
-cmd /c %nuget% pack "NuGet\DeersoLogging.nuspec" -symbols -o Build -p Configuration=%config% %version%
+cmd /c %nuget% pack "NuGet\Deerso.Logging.nuspec" -symbols -o Build -p Configuration=%config% %version%
 if not "%errorlevel%"=="0" goto failure
