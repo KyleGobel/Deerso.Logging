@@ -29,7 +29,7 @@ namespace Logging
             var sb = new StringBuilder();
 
             if (_prependTimesToLogs)
-                sb.Append(DateTime.Now.ToString("u") + ":");
+                sb.Append(DateTime.Now.ToString("u") + ": ");
 
             while (exception != null)
             {
@@ -43,6 +43,7 @@ namespace Logging
             }
 
             sb.Append(message);
+            sb.Append(Environment.NewLine);
 
             var logName = _logName;
             if (_appendFileWithDate)
