@@ -15,6 +15,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\bin\Logging.dll" target="lib"/>
+    <file src="..\bin\*.*" target="lib"/>
+    <file src="..\src\Logging\**\*.cs" target="src" />
   </files>
 </package>
