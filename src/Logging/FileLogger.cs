@@ -29,10 +29,11 @@ namespace Logging
             var sb = new StringBuilder();
 
             if (_prependTimesToLogs)
-                sb.Append(DateTime.Now.ToString("u") + ":").Append(Environment.NewLine);
+                sb.Append(DateTime.Now.ToString("u") + ":");
 
             while (exception != null)
             {
+                sb.Append(Environment.NewLine);
                 sb.Append("Message: ").Append(exception.Message).Append(Environment.NewLine)
                     .Append("Source: ").Append(exception.Source).Append(Environment.NewLine)
                     .Append("Target site: ").Append(exception.TargetSite).Append(Environment.NewLine)
@@ -43,13 +44,14 @@ namespace Logging
 
             sb.Append(message);
 
+            var logName = _logName;
             if (_appendFileWithDate)
             {
-                _logName += "_" + DateTime.Now.ToString("yy-MM-dd");
+                logName += "_" + DateTime.Now.ToString("yy-MM-dd");
             }
             if (!Directory.Exists(FileLogConfig.LogDirectory))
                 Directory.CreateDirectory(FileLogConfig.LogDirectory);
-            File.AppendAllText(Path.Combine(FileLogConfig.LogDirectory, _logName + FileLogConfig.LogExtension), sb.ToString());
+            File.AppendAllText(Path.Combine(FileLogConfig.LogDirectory, logName + FileLogConfig.LogExtension), sb.ToString());
         }
         public void Debug(object message)
         {
