@@ -10,7 +10,7 @@
 bin/
 test/
 # Build results
-.nupkg
+*.nupkg
 
 
 [Dd]ebug/
